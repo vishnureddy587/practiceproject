@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:ClientLibraryFolder"
+    categories="[Lab2018.all]"
+    embed="[Lab2018.site,Lab2018.page,Lab2018.topnav,Lab2018.colctrl,Lab2018.textimage]"/>
