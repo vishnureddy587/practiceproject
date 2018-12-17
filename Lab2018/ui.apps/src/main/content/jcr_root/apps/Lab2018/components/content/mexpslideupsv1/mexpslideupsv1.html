@@ -1,0 +1,47 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientlib.all @ categories='mexpslideupsv1'}"/>
+<div data-sly-test="${wcmmode.edit}" data-emptytext="MexpSlideUpsv1" class="cq-placeholder"></div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('.container').click(function(){
+        $('.overlay',this).toggleClass('fullHeight');
+		$('.glyphicon',this).toggleClass("glyphicon-chevron-up").toggleClass("glyphicon-chevron-down");
+		 $(this).next('.showimage').show();
+		  $('.image',this).toggleClass('opacity');
+	
+    })
+})
+
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<div class="hai">
+<div class="container" style="padding-left: 0px;" data-sly-test="${properties.mexpSlideUpImageRef}">
+
+
+  <img src="${properties.mexpSlideUpImageRef}" class="image">
+  
+  <div class="overlay">
+  
+
+<div class="row">
+  <div class="column left" >
+    <h4  class="text_title">${properties.title}</h4>
+    <p  class="body_content">${properties.bodyContent}</p>
+  </div>
+  <div class="column right" >
+  <div align="right" style="margin-right: 100px;"><i class="glyphicon glyphicon-chevron-up "></i> </div>
+
+  </div>
+</div>
+   </div>
+   
+  </div>
+ 
+</div>

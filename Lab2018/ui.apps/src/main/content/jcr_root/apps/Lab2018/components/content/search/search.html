@@ -1,0 +1,24 @@
+<input type="text" id="inputVal" value=""/><input type="button" id="search" value="search">
+
+
+
+<script>
+$(document).ready(function(){
+	$("#search").click(function(){
+	var inputVal =$("#inputVal").val();
+    $.ajax({
+		url:'/bin/mysearch',
+        type:'GET',
+        data:{
+			'inputVal':inputVal
+        },
+        success:function(data){
+			alert(data);
+        },
+        error:function(data){
+
+        },
+    });
+    });
+});
+</script>

@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+.column {
+    float: left;
+    width: 330px;
+    padding: 10px;
+    height: auto;
+}
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 330px;
+  height: 350px;
+}
+.opacity{
+display: block;
+  width: 330px;
+  height: 350px;
+opacity:0.5;
+color: #fff;
+}
+.glyphicon{
+font-size:20px;
+-webkit-text-stroke: 3px white;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: White;
+  overflow: hidden;
+  width: 330px;
+  height: 15%;
+  transition: .5s ease;
+}
+
+.fullHeight {
+    height: 50%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: Black;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+top-margin:2px;
+  width: 230px;
+  overflow-wrap:break-word;
+  height: 150px;
+  
+}
+
+.right {
+  width: 100px;
+  margin-left: 30px;
+  height: 150px;
+}
+.row{
+    height: 150px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.text_title{
+	margin-left: 25px;
+    color:"#6F625A";
+}
+.body_content{
+	margin-left: 25px;
+    color:"#6F625A";
+}

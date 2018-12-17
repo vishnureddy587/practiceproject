@@ -1,0 +1,31 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.js @ categories='login'}"/>
+
+
+Username: <input type="text" id="username"/><br>
+Password: <input type="password" id="password"/><br>
+<input type="button" id="login" value="Login">
+
+
+
+<script>
+$(document).ready(function(){
+	$('#login').click(function(){
+    var username=$('#username').val();
+    var password=$('#password').val();
+    $.ajax({
+		url:'/bin/servlet',
+        type:'GET',
+        data:{
+			'username':username,
+            'password':password
+        },
+       	success:function(data){
+			alert(data);
+        },
+        failure:function(data){
+			alert(data);
+        }
+    	});
+    });
+});
+</script>

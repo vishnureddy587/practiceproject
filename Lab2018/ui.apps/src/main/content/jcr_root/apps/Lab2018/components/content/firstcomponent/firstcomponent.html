@@ -1,0 +1,24 @@
+<div data-sly-test="${wcmmode.edit}" data-emptytext="first component" class="cq-placeholder"></div>
+<div>
+<sly data-sly-use.vishnu="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${vishnu.js @ categories='cq.authoring.dialog'}" />
+<div data-sly-use.heroTextObject="com.aem.summit.core.models.HeroSlingModel" data-sly-test="${heroTextObject}">
+
+ <div data-sly-test="${heroTextObject.show}">
+       <h1>${heroTextObject.heroTextBean.headingText}</h1>
+       <p><b>Description:</b> ${heroTextObject.heroTextBean.description}</p>
+       <p><b>Selected Path value:</b> ${heroTextObject.heroTextBean.path}</p>  
+       <p><b>Date:</b> ${heroTextObject.heroTextBean.date}</p> 
+       <p><b>Country:</b> ${heroTextObject.heroTextBean.type}</p>  
+       <p><b>CHeckbox:</b> ${heroTextObject.heroTextBean.show}</p>  
+ <div data-sly-use.vishnuObj="com.aem.summit.core.models.SlingModel">
+	<p>Headingtext:${vishnuObj.heading}</p>
+	<p>Description:${vishnuObj.description}</p>
+    <p>node:${vishnuObj.createdBy}</p>
+    <p>child resource:${vishnuObj.childResouce}</p>
+</div>
+ </div>
+</div> 
+
+
+
